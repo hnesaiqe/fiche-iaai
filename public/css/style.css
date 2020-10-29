@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Div plaement */
+.containerParentcontainerUserInfo {
+    width: 100%;
+    display: flex;
+}
+
+.containerPlacement {
+    width: 25%;
+}
+
+.containerUserInfo {
+    width: 50%;
+    text-align: center;
+}
+
+/* full size  */
+.input-full {
+    width: -webkit-fill-available;
+}
+
+/* Container information user */
+.conaainercompletform {
+    width: fit-content;
+
+}
+
+.containerUserInfo>table {
+    width: 100%;
+}
+
+.contener_form_recap {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerPlacementFormeInput {
+    display: inline-grid;
+
+}
+
+/* Table form */
+#contener_form_infoprojet-Id {
+    display: none;
+}
+
+.desableLabelXlprog {
+    text-decoration: line-through;
+}
+
+.desableLabelVlc {
+    text-decoration: line-through;
+}
+
+.desableBanque {
+    text-decoration: line-through;
+}
+
+.desableComptable {
+    text-decoration: line-through;
+}
+
+.desablecreationSite {
+    text-decoration: line-through;
+}
+
+.table-center {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.table-center_th {
+    border: 1px solid black;
+}
+
+.table-center_td {
+    border: 1px solid black;
+}
+
+/* Dimension tableau */
+.width-table-1 {
+    width: 15%;
+}
+
+.width-table-2 {
+    width: 20%;
+}
+
+.width-table-3 {
+    width: 50%;
+}
+
+.width-table-4 {
+    width: 100%;
+}
+
+#submit {
+    display: none;
+}
