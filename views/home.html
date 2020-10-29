@@ -88,6 +88,7 @@
                         <div class="contener_form_infoprojet" id="contener_form_infoprojet-Id">
                             <table class="table-center">
                                 <tr>
+                                    <th></th>
                                     <th>Nature / Depense</th>
                                     <th>Poste</th>
                                     <th>Total</th>
@@ -97,6 +98,7 @@
                                 </tr>
                                 <!-- line construcrtor -->
                                 <tr>
+                                    <td class="table-center_td "><label>Identifiant 1:</label> </td>
                                     <td class="table-center_td "><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_constructor" minlength="1" maxlength="20"
                                             name="ie_suppliers_constructor" required autocomplete="off"
@@ -115,11 +117,14 @@
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_constructor"
                                             name="ie_conserve_constructor" class="input-full"
-                                            value="constructorTcheck" />
+                                            value="constructorTcheck" />                                            
+                                        <input type="button" class="add" value="Ajouter une ligne" id="boutonajouterUneLigneContructor" disabled>
                                     </td>
+                                    <td></td>
                                 </tr>
                                 <!-- line technical -->
-                                <tr>
+                                <tr>                                    
+                                    <td class="table-center_td "><label>Identifiant 2:</label> </td>
                                     <td class="table-center_td"><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_technical" minlength="1" maxlength="20"
                                             name="ie_suppliers_technical" required autocomplete="off"
@@ -141,6 +146,7 @@
                                 </tr>
                                 <!-- line works -->
                                 <tr>
+                                    <td class="table-center_td "><label>Identifiant 3:</label> </td>
                                     <td class="table-center_td"><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_work" minlength="1" maxlength="20" name="ie_suppliers_work"
                                             required autocomplete="off" class="input-full desableWork" disabled />
@@ -160,6 +166,7 @@
                                 </tr>
                                 <!-- line transport -->
                                 <tr>
+                                    <td class="table-center_td "><label>Identifiant 4:</label> </td>
                                     <td class="table-center_td"><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_transport" minlength="1" maxlength="20"
                                             name="ie_suppliers_transport" required autocomplete="off" class="input-full
@@ -181,6 +188,7 @@
                                 </tr>
                                 <!-- line office -->
                                 <tr>
+                                    <td class="table-center_td "><label>Identifiant 5:</label> </td>
                                     <td class="table-center_td"><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_office" minlength="1" maxlength="20"
                                             name="ie_suppliers_office" required autocomplete="off" class="input-full
@@ -202,6 +210,7 @@
                                 </tr>
                                 <!-- line furniture -->
                                 <tr>
+                                    <td class="table-center_td "><label>Identifiant 6:</label> </td>
                                     <td class="table-center_td"><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_furniture" minlength="1" maxlength="20"
                                             name="ie_suppliers_furniture" required autocomplete="off"
@@ -325,9 +334,16 @@
                                     </td>
                                 </tr>
                             </table>
+                            <table class="table-center resultaPlus ">
+                                <tr>
+                                    <th  class="width-table-1 table-center_th ">Sélectionner pour supprimer</th>
+                                    <th  class="width-table-2 table-center_th">Nature / Depense</th>
+                                    <th  class="width-table-2 table-center_th">Poste</th>
+                                    <th  class="width-table-2 table-center_th">Total</th>
+                                </tr>
+                            </table>
+                            <button type="button" class="delete">Supprimer une ligne</button>
                         </div>
-
-
                         <!-- Envoyez -->
                         <div class="submitbottom">
                             <input id="submit" type="submit" value="Submit" class="submitClasse">
@@ -337,9 +353,9 @@
                     <div class="blockcaseacocher">
                         <button onclick="disable()">Accepter</button>
                         <button onclick="undisable()">Bare toi</button>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eius, maiores veritatis
-                            minima ducimus corporis voluptates qui accusantium unde doloribus voluptatem aliquid
-                            praesentium molestiae fuga molestias consequuntur dolorem vitae recusandae.</p>
+                        <p>J'accepte et comprend que iaai events utilse ces s'information à des but d'aide pour les
+                            projet qui vous appartient Elle tiens aussi à informé que l'entrprise ne vous octroie pas
+                            une place commie d'office pour obtenir celui-ci mais facilite l'optention de celui-ci </p>
                     </div>
                     <div class="containerlocationBlockForm"></div>
                 </div>
@@ -354,14 +370,16 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableConstructor").prop("disabled", false);
+                    $("#boutonajouterUneLigneContructor").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableConstructor").val("");
-                    $(".desableConstructor").prop("disabled", true);
+                    $(".desableConstructor").prop("disabled", true);                    
+                    $("#boutonajouterUneLigneContructor").prop("disabled", true);
                 }
             });
         });
-        //Ligne du théme constrctor
+        //Ligne du théme technical
         $(document).ready(function () {
             $('input[value="TechnicalCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
@@ -526,6 +544,22 @@
                     $(".desableTresor").val("0");
                     $(".desableTresor").prop("disabled", true);
                 }
+            });
+        });
+        $(document).ready(function () {
+            $(".add").click(function () {
+                let suppliers = $("#ie_suppliers_constructor").val();
+                let post = $("#ie_post_constructor").val();
+                let estimate = $("#ie_estimate_constructor").val();
+                let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 1:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                $("table.resultaPlus").append(ligne);
+            });
+            $(".delete").click(function () {
+                $("table.resultaPlus").find('input[name="select"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("table.resultaPlus tr").remove();
+                    }
+                });
             });
         });
     </script>

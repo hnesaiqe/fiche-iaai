@@ -56,6 +56,7 @@ app.post("/register", function (req, res) {
   const ie_suppliers_furniture = req.body.ie_suppliers_furniture;
   const ie_post_furniture = req.body.ie_post_furniture;
   const ie_estimate_furniture = req.body.ie_estimate_furniture;
+  //Recapitulatif dernier table//
   const ie_total_coutume = req.body.ie_total_coutume;
   const ie_total_stock = req.body.ie_total_stock;
   const ie_total_tresorerie = req.body.ie_total_tresorerie;
@@ -94,7 +95,8 @@ app.post("/register", function (req, res) {
     //Recapitulatif furniture//
     ie_suppliers_furniture: ie_suppliers_furniture,
     ie_post_furniture: ie_post_furniture,
-    ie_estimate_furniture: ie_estimate_furniture,
+    ie_estimate_furniture: ie_estimate_furniture,    
+    //Recapitulatif dernier table//
     ie_total_coutume: ie_total_coutume,
     ie_total_stock: ie_total_stock,
     ie_total_tresorerie: ie_total_tresorerie,
