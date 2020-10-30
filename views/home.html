@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+    <title>Formulaire </title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
 </head>
 <style>
 
@@ -118,7 +118,8 @@
                                         <input type="checkbox" id="ie_conserve_constructor"
                                             name="ie_conserve_constructor" class="input-full"
                                             value="constructorTcheck" />                                            
-                                        <input type="button" class="add" value="Ajouter une ligne" id="boutonajouterUneLigneContructor" disabled>
+                                        <input type="button" class="addContructor" value="Ajouter une ligne" id="boutonajouterUneLigneContructor" disabled>
+                                        <input type="button" value="Voir mes lignes" onclick="window.location.href='#resultaPlusT'">
                                     </td>
                                     <td></td>
                                 </tr>
@@ -142,6 +143,7 @@
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_technical" name="ie_conserve_technical"
                                             value="TechnicalCheck">
+                                            <input type="button" class="addTechnical" value="Ajouter une ligne" id="boutonajouterUneLigneTechnical" disabled>
                                     </td>
                                 </tr>
                                 <!-- line works -->
@@ -334,7 +336,8 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="table-center resultaPlus ">
+                            <h2 class="text-center">RAJOUT DE LIGNE</h2>
+                            <table class="table-center resultaPlus " id="resultaPlusT">
                                 <tr>
                                     <th  class="width-table-1 table-center_th ">Sélectionner pour supprimer</th>
                                     <th  class="width-table-2 table-center_th">Nature / Depense</th>
@@ -370,9 +373,10 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableConstructor").prop("disabled", false);
-                    $("#boutonajouterUneLigneContructor").prop("disabled", false);
+                    $("#boutonajouterUneLigneContructor").prop("disabled", false);  
+                    $(".desableConstructor").val("Aucune valeur"); 
                 } else if ($(this).prop("checked") == false) {
-                    //Désactive un élément
+                    //Désactive un élément                                     
                     $(".desableConstructor").val("");
                     $(".desableConstructor").prop("disabled", true);                    
                     $("#boutonajouterUneLigneContructor").prop("disabled", true);
@@ -385,10 +389,13 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableTechnical").prop("disabled", false);
+                    $("#boutonajouterUneLigneTechnical").prop("disabled", false);                    
+                    $(".desableTechnical").val("Aucune valeur"); 
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableTechnical").val("");
                     $(".desableTechnical").prop("disabled", true);
+                    $("#boutonajouterUneLigneTechnical").prop("disabled", true);
                 }
             });
         });
@@ -546,14 +553,32 @@
                 }
             });
         });
+        // !--Ligne suplémentaire Constructor-- >
         $(document).ready(function () {
-            $(".add").click(function () {
+            $(".addContructor").click(function () {
                 let suppliers = $("#ie_suppliers_constructor").val();
                 let post = $("#ie_post_constructor").val();
                 let estimate = $("#ie_estimate_constructor").val();
                 let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 1:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
                 $("table.resultaPlus").append(ligne);
             });
+            $(".delete").click(function () {
+                $("table.resultaPlus").find('input[name="select"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("table.resultaPlus tr").remove();
+                    }
+                });
+            });
+        });
+        // !--Ligne suplémentaire Constructor-- >
+        $(document).ready(function () {
+        $(".addTechnical").click(function () {
+        let suppliers = $("#ie_suppliers_technical").val();
+        let post = $("#ie_post_technical").val();
+        let estimate = $("#ie_estimate_technical").val();
+        let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 2:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+        $("table.resultaPlus").append(ligne);
+        });
             $(".delete").click(function () {
                 $("table.resultaPlus").find('input[name="select"]').each(function () {
                     if ($(this).is(":checked")) {

@@ -95,7 +95,7 @@ app.post("/register", function (req, res) {
     //Recapitulatif furniture//
     ie_suppliers_furniture: ie_suppliers_furniture,
     ie_post_furniture: ie_post_furniture,
-    ie_estimate_furniture: ie_estimate_furniture,    
+    ie_estimate_furniture: ie_estimate_furniture,
     //Recapitulatif dernier table//
     ie_total_coutume: ie_total_coutume,
     ie_total_stock: ie_total_stock,
@@ -105,7 +105,7 @@ app.post("/register", function (req, res) {
 
   connection.query("INSERT INTO users SET ?", user);
 
-  return res.render('success', { user : user });
+  return res.render('success', { user: user });
 });
 
 app
