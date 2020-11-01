@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="contener_form_infoprojet" id="contener_form_infoprojet-Id">
-                            <table class="table-center">
+                            <table class="table-center resultaPlusContructor ">
                                 <tr>
                                     <th></th>
                                     <th>Nature / Depense</th>
@@ -100,17 +100,17 @@
                                 <tr>
                                     <td class="table-center_td "><label>Identifiant 1:</label> </td>
                                     <td class="table-center_td "><input placeholder="Fournisseur" type="text"
-                                            id="ie_suppliers_constructor" minlength="1" maxlength="20"
+                                            id="ie_suppliers_constructor" minlength="1" maxlength="300"
                                             name="ie_suppliers_constructor" required autocomplete="off"
                                             class="input-full desableConstructor" disabled />
                                     </td>
                                     <td class="table-center_td"><input placeholder="Construction, Bâtiment" type="text"
-                                            id="ie_post_constructor" minlength="1" maxlength="20"
+                                            id="ie_post_constructor" minlength="1" maxlength="300"
                                             name="ie_post_constructor" required autocomplete="off" class="input-full
                                             desableConstructor" disabled />
                                     </td>
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
-                                            id="ie_estimate_constructor" minlength="1" maxlength="20"
+                                            id="ie_estimate_constructor" minlength="1" maxlength="300"
                                             name="ie_estimate_constructor" required autocomplete="off"
                                             class="input-full desableConstructor" disabled />
                                     </td>
@@ -119,9 +119,18 @@
                                             name="ie_conserve_constructor" class="input-full"
                                             value="constructorTcheck" />                                            
                                         <input type="button" class="addContructor" value="Ajouter une ligne" id="boutonajouterUneLigneContructor" disabled>
-                                        <input type="button" value="Voir mes lignes" onclick="window.location.href='#resultaPlusT'">
                                     </td>
-                                    <td></td>
+                                </tr>
+                                </table>
+                                 <table class="table-center resultaPlusTechnical">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <!-- <th>AJOUTER UN FICHIER</th> -->
+
                                 </tr>
                                 <!-- line technical -->
                                 <tr>                                    
@@ -146,6 +155,17 @@
                                             <input type="button" class="addTechnical" value="Ajouter une ligne" id="boutonajouterUneLigneTechnical" disabled>
                                     </td>
                                 </tr>
+                                </table>
+                                <table class="table-center resultaPlusWork">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <!-- <th>AJOUTER UN FICHIER</th> -->
+
+                                </tr>
                                 <!-- line works -->
                                 <tr>
                                     <td class="table-center_td "><label>Identifiant 3:</label> </td>
@@ -164,7 +184,19 @@
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_works" name="ie_conserve_works"
                                             value="WorkCheck">
+                                        <input type="button" class="addWork" value="Ajouter une ligne" id="boutonajouterUneLigneWork" disabled>
                                     </td>
+                                </tr>
+                                </table>
+                                <table class="table-center resultaPlustransport">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <!-- <th>AJOUTER UN FICHIER</th> -->
+
                                 </tr>
                                 <!-- line transport -->
                                 <tr>
@@ -186,8 +218,11 @@
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_transport" name="ie_conserve_transport"
                                             value="transportCheck">
+                                        <input type="button" class="addTransport" value="Ajouter une ligne" id="boutonajouterUneLigneTransport" disabled>
                                     </td>
                                 </tr>
+                                </table>
+                                <table>
                                 <!-- line office -->
                                 <tr>
                                     <td class="table-center_td "><label>Identifiant 5:</label> </td>
@@ -337,14 +372,14 @@
                                 </tr>
                             </table>
                             <h2 class="text-center">RAJOUT DE LIGNE</h2>
-                            <table class="table-center resultaPlus " id="resultaPlusT">
+                            <!-- <table class="table-center resultaPlus " id="resultaPlusT">
                                 <tr>
                                     <th  class="width-table-1 table-center_th ">Sélectionner pour supprimer</th>
                                     <th  class="width-table-2 table-center_th">Nature / Depense</th>
                                     <th  class="width-table-2 table-center_th">Poste</th>
                                     <th  class="width-table-2 table-center_th">Total</th>
                                 </tr>
-                            </table>
+                            </table> -->
                             <button type="button" class="delete">Supprimer une ligne</button>
                         </div>
                         <!-- Envoyez -->
@@ -405,10 +440,13 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableWork").prop("disabled", false);
+                    $("#boutonajouterUneLigneWork").prop("disabled", false); 
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableWork").val("");
                     $(".desableWork").prop("disabled", true);
+                    $("#boutonajouterUneLigneWork").prop("disabled", true);
+                    
                 }
             });
         });
@@ -418,10 +456,12 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableTransport").prop("disabled", false);
+                    $("#boutonajouterUneLigneTransport").prop("disabled", false); 
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableTransport").val("");
                     $(".desableTransport").prop("disabled", true);
+                    $("#boutonajouterUneLigneTransport").prop("disabled", true);
                 }
             });
         });
@@ -560,12 +600,12 @@
                 let post = $("#ie_post_constructor").val();
                 let estimate = $("#ie_estimate_constructor").val();
                 let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 1:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
-                $("table.resultaPlus").append(ligne);
+                $("table.resultaPlusContructor").append(ligne);
             });
             $(".delete").click(function () {
-                $("table.resultaPlus").find('input[name="select"]').each(function () {
+                $("table.resultaPlusContructor").find('input[name="select"]').each(function () {
                     if ($(this).is(":checked")) {
-                        $(this).parents("table.resultaPlus tr").remove();
+                        $(this).parents("table.resultaPlusContructor tr").remove();
                     }
                 });
             });
@@ -577,12 +617,47 @@
         let post = $("#ie_post_technical").val();
         let estimate = $("#ie_estimate_technical").val();
         let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 2:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
-        $("table.resultaPlus").append(ligne);
+        $("table.resultaPlusTechnical").append(ligne);
         });
             $(".delete").click(function () {
-                $("table.resultaPlus").find('input[name="select"]').each(function () {
+                $("table.resultaPlusTechnical").find('input[name="select"]').each(function () {
                     if ($(this).is(":checked")) {
-                        $(this).parents("table.resultaPlus tr").remove();
+                        $(this).parents("table.resultaPlusTechnical tr").remove();
+                    }
+                });
+            });
+        });
+        
+        // !--Ligne suplémentaire Works-- >
+        $(document).ready(function () {
+        $(".addWork").click(function () {
+        let suppliers = $("#ie_suppliers_work").val();
+        let post = $("#ie_post_work").val();
+        let estimate = $("#ie_estimate_work").val();
+        let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 3:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+        $("table.resultaPlusWork").append(ligne);
+        });
+            $(".delete").click(function () {
+                $("table.resultaPlusWork").find('input[name="select"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("table.resultaPlusWork tr").remove();
+                    }
+                });
+            });
+        });
+        // !--Ligne suplémentaire Transport-- >
+        $(document).ready(function () {
+        $(".addTransport").click(function () {
+        let suppliers = $("#ie_suppliers_transport").val();
+        let post = $("#ie_post_transport").val();
+        let estimate = $("#ie_estimate_transport").val();
+        let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 4:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+        $("table.resultaPlustransport").append(ligne);
+        });
+            $(".delete").click(function () {
+                $("table.resultaPlustransport").find('input[name="select"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("table.resultaPlustransport tr").remove();
                     }
                 });
             });
