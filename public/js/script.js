@@ -9,3 +9,4 @@ function undisable() {
     document.getElementById("myForm").reset();
 
 }
+// Mode Imprimer//

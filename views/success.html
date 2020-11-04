@@ -7,9 +7,19 @@
   <title>Successfully Registered</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <style>
+    #screenshot {
+      width: 300px;
+      height: 400px;
+    }
+    
+  </style>
 </head>
 
 <body>
+  <input id="impression" name="impression" type="button"  value="Imprimer cette page" onclick="imprimer_page()">  
   <div class="containerTop">
     <div class="containerApsolute"></div>
     <div style="height: 80px;"></div>
@@ -207,97 +217,109 @@
                   </td>
                 </tr>
               </table>
-              <!-- Table 2 -->
-              <table class="table-center">
-                <tr>
-                  <th class="width-table-2"></th>
-                  <th class="width-table-">SOUS-TOTAL IMMOBILISATIONS CORPORELLES</th>
-                  <th class="table-center_th width-table-1">0 XPF</th>
-                  <th class="table-center_th width-table-1">Conserner</th>
-                  <!-- <th class="table-center_th width-table-1">AJOUTER</th> -->
-                </tr>
-                <tr>
-                  <td class="table-center_td"> <label>XL PROG</label></td>
-                  <td class="table-center_td">Logiciels Informatique</td>
-                  <td class="table-center_td">200 000 XPF</td>
-                  <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-center_td"> <label>VLC</label></td>
-                  <td class="table-center_td">Formalités de création et madifications statuts
-                    entreprise</td>
-                  <td class="table-center_td">275 000 XPF</td>
-                  <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-center_td"> <label>Coutume</label></td>
-                  <td class="table-center_td"> <label>Estimation du don en nature</label></td>
-                  <td class="table-center_td"> <input type="text" id="ie_total_coutume" class="input-full"
-                      value="{{ user.ie_total_coutume }}" disabled="disable"></td>
-                  <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
-                  </td>
-                </tr>
-              </table>
-              <!-- table 3 -->
-              <table class="table-center">
-                <tr>
-                  <th class="width-table-2"></th>
-                  <th class="width-table-3">SOUS-TOTAL IMMOBILISATIONS INCORPORELLES</th>
-                  <th class="table-center_th width-table-1">475 000 XPF</th>
-                  <th class="table-center_th width-table-1">Conserner
-                  <th>
-                </tr>
-                <tr>
-                  <td class="table-center_td"> <label>BANQUE</label></td>
-                  <td class="table-center_td"></td>
-                  <td class="table-center_td">40 000 XPF</td>
-                  <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-center_td"> <label>EXPERT COMPTABLE</label></td>
-                  <td class="table-center_td">Expert comptable</td>
-                  <td class="table-center_td">375 000 XPF</td>
-                  <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-center_td"> <label>APSYLONE</label></td>
-                  <td class="table-center_td"> <label>Publicité, site internet, logo</label></td>
-                  <td class="table-center_td"> <label>350 000 XPF</label></td>
-                  <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog">
-                  </td>
-                </tr>
-              </table>
-              <table class="table-center">
-                <tr>
-                  <th class="width-table-2"></th>
-                  <th class="width-table-3">SOUS-TOTAL AUTRES FRAIS IMMOBILISES</th>
-                  <th class="table-center_th width-table-1">765 000 XPF</th>
-                  <th class="table-center_th width-table-1">Conserner
-                  <th>
-                </tr>
-                <tr>
-                  <td class="table-center_td "> <label>STOCK</label></td>
-                  <td class="table-center_td "><label></label></td>
-                  <td class="table-center_td "><input type="text" id="ie_total_stock" class="input-full"
-                      value="{{ user.ie_total_stock }}" disabled="disable"></td>
-                  <td class="table-center_td "><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog"
-                      class="input-full">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="table-center_td "> <label>Trésorerie de départ</label></td>
-                  <td class="table-center_td "><label></label></td>
-                  <td class="table-center_td "><input type=" text" id="ie_total_tresorerie" class="input-full"
-                      value="{{ user.ie_total_tresorerie }}" disabled="disable"></td>
-                  <td class="table-center_td "><input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog"
-                      class="input-full">
-                  </td>
-                </tr>
-              </table>
+                            <!-- Table 2 -->
+                            <table class="table-center">
+                                <tr>
+                                    <th class="width-table-2"></th>
+                                    <th class="width-table-">SOUS-TOTAL IMMOBILISATIONS CORPORELLES</th>
+                                    <th class="table-center_th width-table-1">0 XPF</th>
+                                    <th class="table-center_th width-table-1">Conserner</th>
+                                    <!-- <th class="table-center_th width-table-1">AJOUTER</th> -->
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td "> <label>XL PROG</label></td>
+                                    <td class="table-center_td ">Logiciels Informatique</td>
+                                    <td class="table-center_td desableLabelXlprog">200 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
+                                            name="ie_conserve_prog" value="xlprogCheck">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>VLC</label></td>
+                                    <td class="table-center_td">Formalités de création et madifications statuts
+                                        entreprise</td>
+                                    <td class="table-center_td desableLabelVlc">275 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_vlc"
+                                            name="ie_conserve_vlc" value="vlcCheck">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>Coutume</label></td>
+                                    <td class="table-center_td"> <label>Estimation du don en nature</label></td>
+                                    <td class="table-center_td"> <input type="text" id="ie_total_coutume"
+                                            class="input-full desableCoutume" name="ie_total_coutume" value="{{ user.ie_total_coutume }}"
+                                            disabled></td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_coutume"
+                                            name="ie_conserve_coutume" value="{{ user.ie_conserve_coutume }}">
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- table 3 -->
+                            <table class="table-center">
+                                <tr>
+                                    <th class="width-table-2"></th>
+                                    <th class="width-table-3">SOUS-TOTAL IMMOBILISATIONS INCORPORELLES</th>
+                                    <th class="table-center_th width-table-1">475 000 XPF</th>
+                                    <th class="table-center_th width-table-1">Conserner
+                                    <th>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>BANQUE</label></td>
+                                    <td class="table-center_td"></td>
+                                    <td class="table-center_td desableBanque">40 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_bank"
+                                            name="ie_conserve_bank" value="banqueCheck">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>EXPERT COMPTABLE</label></td>
+                                    <td class="table-center_td">Expert comptable</td>
+                                    <td class="table-center_td desableComptable">375 000 XPF</td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_comptable"
+                                            name="ie_conserve_comptable" value="comptableCheck">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td"> <label>APSYLONE</label></td>
+                                    <td class="table-center_td"> <label>Publicité, site internet, logo</label></td>
+                                    <td class="table-center_td desablecreationSite"> <label>350 000 XPF</label></td>
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_site"
+                                            name="ie_conserve_site" value="creationSiteCheck">
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- table 4 -->
+                            <table class="table-center">
+                                <tr>
+                                    <th class="width-table-2"></th>
+                                    <th class="width-table-3">SOUS-TOTAL AUTRES FRAIS IMMOBILISES</th>
+                                    <th class="table-center_th width-table-1">765 000 XPF</th>
+                                    <th class="table-center_th width-table-1">Conserner
+                                    <th>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td "> <label>STOCK</label></td>
+                                    <td class="table-center_td "><label></label></td>
+                                    <td class="table-center_td ">
+                                        <input type="text" id="ie_total_stock" class="input-full desableStock"
+                                            name="ie_total_stock" value="{{ user.ie_total_stock }}" disabled>
+                                    </td>
+                                    <td class="table-center_td ">
+                                        <input type="checkbox" id="ie_conserve_stock" name="ie_conserve_stock"
+                                            class="input-full" value="stockCheck">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-center_td "> <label>Trésorerie de départ</label></td>
+                                    <td class="table-center_td "><label></label></td>
+                                    <td class="table-center_td "><input type=" text" id="ie_total_tresorerie"
+                                            class="input-full desableTresor" name="ie_total_tresorerie" value="{{ user.ie_total_tresorerie }}"
+                                            disabled></td>
+                                    <td class="table-center_td "><input type="checkbox" id="ie_conserve_tresorerie"
+                                            name="ie_conserve_tresorerie" class="input-full" value="tresorCheck">
+                                    </td>
+                                </tr>
+                            </table>
             </div>
             <!-- Envoyez -->
             <div class="submitbottom">
@@ -308,6 +330,13 @@
       </div>
     </div>
   </div>
+
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+function imprimer_page(){
+  window.print();
+}
+</script>
 
 </html>

@@ -60,6 +60,18 @@ app.post("/register", function (req, res) {
   const ie_total_coutume = req.body.ie_total_coutume;
   const ie_total_stock = req.body.ie_total_stock;
   const ie_total_tresorerie = req.body.ie_total_tresorerie;
+  //Recapitulatif des checkBox etat//
+  const ie_conserve_prog = req.body.ie_conserve_prog;
+  const ie_conserve_vlc = req.body.ie_conserve_vlc;
+  const ie_conserve_coutume = req.body.ie_conserve_coutume;
+  const ie_conserve_bank = req.body.ie_conserve_bank;
+  const ie_conserve_comptable = req.body.ie_conserve_comptable;
+  const ie_conserve_site = req.body.ie_conserve_site;
+  const ie_conserve_stock = req.body.ie_conserve_stock;
+  const ie_conserve_tresorerie = req.body.ie_conserve_tresorerie;
+
+
+
 
   const user = {
     ie_projet_name: ie_projet_name,
@@ -96,10 +108,20 @@ app.post("/register", function (req, res) {
     ie_suppliers_furniture: ie_suppliers_furniture,
     ie_post_furniture: ie_post_furniture,
     ie_estimate_furniture: ie_estimate_furniture,
+    //Recapitulatif des checkBox etat//
+    ie_conserve_prog: ie_conserve_prog,
+    ie_conserve_vlc: ie_conserve_vlc,
+    ie_conserve_coutume: ie_conserve_coutume,
+    ie_conserve_bank: ie_conserve_bank,
+    ie_conserve_comptable: ie_conserve_comptable,
+    ie_conserve_site: ie_conserve_site,
+    ie_conserve_stock: ie_conserve_stock,
+    ie_conserve_tresorerie: ie_conserve_tresorerie,
+
     //Recapitulatif dernier table//
-    ie_total_coutume: ie_total_coutume,
     ie_total_stock: ie_total_stock,
-    ie_total_tresorerie: ie_total_tresorerie,
+    ie_total_coutume: ie_total_coutume,
+    ie_total_tresorerie: ie_total_tresorerie
 
   };
 

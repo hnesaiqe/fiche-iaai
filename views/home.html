@@ -7,7 +7,7 @@
     <title>Formulaire </title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
 
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="contener_form_infoprojet" id="contener_form_infoprojet-Id">
-                            <table class="table-center resultaPlusContructor ">
+                            <table class="table-center resultaPlusContructor table table-bordered ">
                                 <tr>
                                     <th></th>
                                     <th>Nature / Depense</th>
@@ -112,17 +112,18 @@
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
                                             id="ie_estimate_constructor" minlength="1" maxlength="300"
                                             name="ie_estimate_constructor" required autocomplete="off"
-                                            class="input-full desableConstructor" disabled />
+                                            class="input-full desableConstructor txt input-mini" disabled />
                                     </td>
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_constructor"
                                             name="ie_conserve_constructor" class="input-full"
-                                            value="constructorTcheck" />                                            
-                                        <input type="button" class="addContructor" value="Ajouter une ligne" id="boutonajouterUneLigneContructor" disabled>
+                                            value="constructorTcheck" />
+                                        <input type="button" class="addContructor" value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneContructor" disabled>
                                     </td>
                                 </tr>
-                                </table>
-                                 <table class="table-center resultaPlusTechnical">
+                            </table>
+                            <table class="table-center resultaPlusTechnical table table-bordered">
                                 <tr>
                                     <th></th>
                                     <th></th>
@@ -133,12 +134,12 @@
 
                                 </tr>
                                 <!-- line technical -->
-                                <tr>                                    
+                                <tr>
                                     <td class="table-center_td "><label>Identifiant 2:</label> </td>
                                     <td class="table-center_td"><input placeholder="Fournisseur" type="text"
                                             id="ie_suppliers_technical" minlength="1" maxlength="20"
                                             name="ie_suppliers_technical" required autocomplete="off"
-                                            class="input-full desableTechnical" disabled />
+                                            class="input-full desableTechnical " disabled />
                                     </td>
                                     <td class="table-center_td"><input placeholder="Matériel Technique" type="text"
                                             id="ie_post_technical" minlength="1" maxlength="20" name="ie_post_technical"
@@ -147,16 +148,17 @@
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
                                             id="ie_estimate_technical" minlength="1" maxlength="20"
                                             name="ie_estimate_technical" required autocomplete="off"
-                                            class="input-full desableTechnical" disabled />
+                                            class="input-full desableTechnical txt input-mini" disabled />
                                     </td>
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_technical" name="ie_conserve_technical"
                                             value="TechnicalCheck">
-                                            <input type="button" class="addTechnical" value="Ajouter une ligne" id="boutonajouterUneLigneTechnical" disabled>
+                                        <input type="button" class="addTechnical" value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneTechnical" disabled>
                                     </td>
                                 </tr>
-                                </table>
-                                <table class="table-center resultaPlusWork">
+                            </table>
+                            <table class="table-center resultaPlusWork table table-bordered">
                                 <tr>
                                     <th></th>
                                     <th></th>
@@ -179,16 +181,17 @@
                                     </td>
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
                                             id="ie_estimate_work" minlength="1" maxlength="20" name="ie_estimate_work"
-                                            required autocomplete="off" class="input-full desableWork" disabled />
+                                            required autocomplete="off" class="input-full desableWork txt input-mini" disabled />
                                     </td>
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_works" name="ie_conserve_works"
                                             value="WorkCheck">
-                                        <input type="button" class="addWork" value="Ajouter une ligne" id="boutonajouterUneLigneWork" disabled>
+                                        <input type="button" class="addWork" value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneWork" disabled>
                                     </td>
                                 </tr>
-                                </table>
-                                <table class="table-center resultaPlustransport">
+                            </table>
+                            <table class="table-center resultaPlustransport table table-bordered">
                                 <tr>
                                     <th></th>
                                     <th></th>
@@ -213,16 +216,25 @@
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
                                             id="ie_estimate_transport" minlength="1" maxlength="20"
                                             name="ie_estimate_transport" required autocomplete="off" class="input-full
-                                            desableTransport" disabled />
+                                            desableTransport txt input-mini" disabled />
                                     </td>
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_transport" name="ie_conserve_transport"
                                             value="transportCheck">
-                                        <input type="button" class="addTransport" value="Ajouter une ligne" id="boutonajouterUneLigneTransport" disabled>
+                                        <input type="button" class="addTransport" value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneTransport" disabled>
                                     </td>
                                 </tr>
-                                </table>
-                                <table>
+                            </table>
+                            <table class="table-center resultaPlusOffice table table-bordered">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <!-- <th>AJOUTER UN FICHIER</th> -->
+                                </tr>
                                 <!-- line office -->
                                 <tr>
                                     <td class="table-center_td "><label>Identifiant 5:</label> </td>
@@ -238,12 +250,25 @@
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
                                             id="ie_estimate_office" minlength="1" maxlength="20"
                                             name="ie_estimate_office" required autocomplete="off"
-                                            class="input-full desableOffice" disabled />
+                                            class="input-full desableOffice txt input-mini" disabled />
                                     </td>
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_office" name="ie_conserve_office"
                                             value="officeCheck">
+                                        <input type="button" class="addOffice" value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneOffice" disabled>
                                     </td>
+                                </tr>
+                            </table>
+
+                            <table class="table-center resultaPlusFurniture table table-bordered">
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <!-- <th>AJOUTER UN FICHIER</th> -->
                                 </tr>
                                 <!-- line furniture -->
                                 <tr>
@@ -260,57 +285,85 @@
                                     <td class="table-center_td"><input placeholder="Estimation XPF" type="text"
                                             id="ie_estimate_furniture" minlength="1" maxlength="20"
                                             name="ie_estimate_furniture" required autocomplete="off"
-                                            class="input-full desableFurniture" disabled />
+                                            class="input-full desableFurniture txt input-mini" disabled />
                                     </td>
                                     <td class="table-center_td">
                                         <input type="checkbox" id="ie_conserve_furniture" name="ie_conserve_furniture"
                                             value="furnitureCheck">
+                                        <input type="button" class="addFurniture" value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneFurniture" disabled>
                                     </td>
                                 </tr>
-                            </table>
+                            </table>                                                        
                             <!-- Table 2 -->
-                            <table class="table-center">
+                            <table class="table-center table table-bordered">
                                 <tr>
+                                    <th></th>
+                                    <th>ID :</th>
                                     <th class="width-table-2"></th>
                                     <th class="width-table-">SOUS-TOTAL IMMOBILISATIONS CORPORELLES</th>
-                                    <th class="table-center_th width-table-1">0 XPF</th>
+                                    <th class="table-center_th width-table-1" id="totalTableOne"> 
+                                        <div class="span7">
+                                            <div class="form-inline">
+                                                <label>Quarters' Total</label>
+                                                <input type="text" class="input-mini" />
+                                                <input type="text" class="input-mini" style="display: none;" />
+                                                <input type="text" class="input-mini" style="display: none;"/>
+                                            </div>
+                                        </div>
+                                    </th>
                                     <th class="table-center_th width-table-1">Conserner</th>
                                     <!-- <th class="table-center_th width-table-1">AJOUTER</th> -->
                                 </tr>
                                 <tr>
+                                    <td></td>
+                                    <td>ID 1</td>
                                     <td class="table-center_td "> <label>XL PROG</label></td>
                                     <td class="table-center_td ">Logiciels Informatique</td>
                                     <td class="table-center_td desableLabelXlprog">200 000 XPF</td>
-                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" value="xlprogCheck">
+                                    <td class="table-center_td">
+                                    <input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog" value="xlprogCheck">
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td></td>
+                                    <td>ID 2</td>
                                     <td class="table-center_td"> <label>VLC</label></td>
                                     <td class="table-center_td">Formalités de création et madifications statuts
                                         entreprise</td>
                                     <td class="table-center_td desableLabelVlc">275 000 XPF</td>
-                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" value="vlcCheck">
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_vlc"
+                                            name="ie_conserve_vlc" value="">
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td></td>
+                                    <td>ID 3</td>
                                     <td class="table-center_td"> <label>Coutume</label></td>
                                     <td class="table-center_td"> <label>Estimation du don en nature</label></td>
                                     <td class="table-center_td"> <input type="text" id="ie_total_coutume"
-                                            class="input-full desableCoutume" name="ie_total_coutume" value="0"
+                                            class="input-full desableCoutume txt input-mini" name="ie_total_coutume" value="0"
                                             disabled></td>
-                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" value="coutumeCheck">
+                                    <td class="table-center_td">
+                                        <input type="checkbox" id="ie_conserve_coutume" name="ie_conserve_coutume" value="">
                                     </td>
                                 </tr>
                             </table>
                             <!-- table 3 -->
-                            <table class="table-center">
+                            <table class="table-center table table-bordered">
                                 <tr>
                                     <th class="width-table-2"></th>
                                     <th class="width-table-3">SOUS-TOTAL IMMOBILISATIONS INCORPORELLES</th>
-                                    <th class="table-center_th width-table-1">475 000 XPF</th>
+                                    <th class="table-center_th width-table-1">
+                                        <div class="span8">
+                                            <div class="form-inline">
+                                                <label>Quarters' Total</label>
+                                                <input type="text" class="input-mini" style="display: none;"/>
+                                                <input type="text" class="input-mini"/>
+                                                <input type="text" class="input-mini" style="display: none;"/>
+                                            </div>
+                                        </div>
+                                    </th>
                                     <th class="table-center_th width-table-1">Conserner
                                     <th>
                                 </tr>
@@ -318,59 +371,97 @@
                                     <td class="table-center_td"> <label>BANQUE</label></td>
                                     <td class="table-center_td"></td>
                                     <td class="table-center_td desableBanque">40 000 XPF</td>
-                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" value="banqueCheck">
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_bank"
+                                            name="ie_conserve_bank" value="banqueCheck">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="table-center_td"> <label>EXPERT COMPTABLE</label></td>
                                     <td class="table-center_td">Expert comptable</td>
                                     <td class="table-center_td desableComptable">375 000 XPF</td>
-                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" value="comptableCheck">
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_comptable"
+                                            name="ie_conserve_comptable" value="comptableCheck">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="table-center_td"> <label>APSYLONE</label></td>
                                     <td class="table-center_td"> <label>Publicité, site internet, logo</label></td>
                                     <td class="table-center_td desablecreationSite"> <label>350 000 XPF</label></td>
-                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" value="creationSiteCheck">
+                                    <td class="table-center_td"><input type="checkbox" id="ie_conserve_site"
+                                            name="ie_conserve_site" value="creationSiteCheck">
                                     </td>
                                 </tr>
                             </table>
                             <!-- table 4 -->
-                            <table class="table-center">
+                            <table class="table-center table table-bordered">
                                 <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                     <th class="width-table-2"></th>
                                     <th class="width-table-3">SOUS-TOTAL AUTRES FRAIS IMMOBILISES</th>
-                                    <th class="table-center_th width-table-1">765 000 XPF</th>
+                                    <th class="table-center_th width-table-1">
+                                        <div class="span9">
+                                            <div class="form-inline">
+                                                <label>Quarters' Total</label>
+                                                <input type="text" class="input-mini"  style="display: none;"/>
+                                                <input type="text" class="input-mini" style="display: none;" />
+                                                <input type="text" class="input-mini" />
+                                            </div>
+                                        </div>
+                                    </th>
                                     <th class="table-center_th width-table-1">Conserner
                                     <th>
                                 </tr>
                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>ID 1</td>
                                     <td class="table-center_td "> <label>STOCK</label></td>
                                     <td class="table-center_td "><label></label></td>
                                     <td class="table-center_td ">
-                                        <input type="text" id="ie_total_stock" class="input-full desableStock"
+                                        <input type="text" id="ie_total_stock" class="input-full desableStock txt input-mini"
                                             name="ie_total_stock" value="0" disabled>
                                     </td>
                                     <td class="table-center_td ">
-                                        <input type="checkbox" id="ie_conserve_prog" name="ie_conserve_prog"
+                                        <input type="checkbox" id="ie_conserve_stock" name="ie_conserve_stock"
                                             class="input-full" value="stockCheck">
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td>ID 2</td>
                                     <td class="table-center_td "> <label>Trésorerie de départ</label></td>
                                     <td class="table-center_td "><label></label></td>
                                     <td class="table-center_td "><input type=" text" id="ie_total_tresorerie"
-                                            class="input-full desableTresor" name="ie_total_tresorerie" value="0"
+                                            class="input-full desableTresor txt input-mini" name="ie_total_tresorerie" value="0"
                                             disabled></td>
-                                    <td class="table-center_td "><input type="checkbox" id="ie_conserve_prog"
-                                            name="ie_conserve_prog" class="input-full" value="tresorCheck">
+                                    <td class="table-center_td "><input type="checkbox" id="ie_conserve_tresorerie"
+                                            name="ie_conserve_tresorerie" class="input-full" value="tresorCheck">
                                     </td>
                                 </tr>
                             </table>
+                        <!-- totaux -->
+                        <div style="display: flex;">
+                            <div class="placementDiv" style="width: 80%;"></div>
+                        <table class="table-center table table-bordered" style="width: 20%;">
+                            <tr>
+                                <th style="text-align: end;">
+                                <label >Total
+</label>
+                            </th>
+                            </tr>
+                            <tr>
+                                <td><div class="span5">
+                                <div class="form-inline" >
+                                <input id="sum" type="text" class="input-medium" />
+                                 </div>
+                            </div></td>
+                            </tr>
+                        </table></div>
+                        
+                            
                             <h2 class="text-center">RAJOUT DE LIGNE</h2>
                             <!-- <table class="table-center resultaPlus " id="resultaPlusT">
                                 <tr>
@@ -386,7 +477,12 @@
                         <div class="submitbottom">
                             <input id="submit" type="submit" value="Submit" class="submitClasse">
                         </div>
+        </div>
+            </div>
+
                     </form>
+
+
                     <!-- checkbox-->
                     <div class="blockcaseacocher">
                         <button onclick="disable()">Accepter</button>
@@ -408,12 +504,12 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableConstructor").prop("disabled", false);
-                    $("#boutonajouterUneLigneContructor").prop("disabled", false);  
-                    $(".desableConstructor").val("Aucune valeur"); 
+                    $("#boutonajouterUneLigneContructor").prop("disabled", false);
+                    $(".desableConstructor").val("0");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément                                     
                     $(".desableConstructor").val("");
-                    $(".desableConstructor").prop("disabled", true);                    
+                    $(".desableConstructor").prop("disabled", true);
                     $("#boutonajouterUneLigneContructor").prop("disabled", true);
                 }
             });
@@ -424,8 +520,8 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableTechnical").prop("disabled", false);
-                    $("#boutonajouterUneLigneTechnical").prop("disabled", false);                    
-                    $(".desableTechnical").val("Aucune valeur"); 
+                    $("#boutonajouterUneLigneTechnical").prop("disabled", false);
+                    $(".desableTechnical").val("Aucune valeur");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableTechnical").val("");
@@ -440,13 +536,14 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableWork").prop("disabled", false);
-                    $("#boutonajouterUneLigneWork").prop("disabled", false); 
+                    $("#boutonajouterUneLigneWork").prop("disabled", false);
+                    $(".desableWork").val("Aucune valeur");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableWork").val("");
                     $(".desableWork").prop("disabled", true);
                     $("#boutonajouterUneLigneWork").prop("disabled", true);
-                    
+
                 }
             });
         });
@@ -455,8 +552,9 @@
             $('input[value="transportCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément
+                    $(".desableTransport").val("Aucune valeur");
                     $(".desableTransport").prop("disabled", false);
-                    $("#boutonajouterUneLigneTransport").prop("disabled", false); 
+                    $("#boutonajouterUneLigneTransport").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableTransport").val("");
@@ -465,66 +563,78 @@
                 }
             });
         });
-        // <!-- line office -->
+        // !--line office-- >
         $(document).ready(function () {
             $('input[value="officeCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
-                    //Active un élément
+                    //Active un élément                    
+                    $(".desableOffice").val("Aucune valeur");
                     $(".desableOffice").prop("disabled", false);
+                    $("#boutonajouterUneLigneOffice").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableOffice").val("");
                     $(".desableOffice").prop("disabled", true);
+                    $("#boutonajouterUneLigneOffice").prop("disabled", true);
                 }
             });
         });
-        //  line furniture -->
+        // line furniture -->
         $(document).ready(function () {
             $('input[value="furnitureCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément
+                    $(".desableFurniture").val("Aucune valeur");
                     $(".desableFurniture").prop("disabled", false);
+                    $("#boutonajouterUneLigneFurniture").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableFurniture").val("");
                     $(".desableFurniture").prop("disabled", true);
+                    $("#boutonajouterUneLigneFurniture").prop("disabled", true);
                 }
             });
         });
         // line xlprogCheck -->
         $(document).ready(function () {
-            $('input[value="xlprogCheck"]').click(function () {
+            $('input[id="ie_conserve_prog"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $('.desableLabelXlprog').css("text-decoration", "none");
+                    $("#ie_conserve_prog").val("xl prog Check Intéréser = OUI");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $('.desableLabelXlprog').css("text-decoration", "line-through");
+                    $("#ie_conserve_prog").val("xl prog Check Intéréser = NON");
                 }
             });
         });
         $ // line vlcCheck -->
         $(document).ready(function () {
-            $('input[value="vlcCheck"]').click(function () {
+            $('input[id="ie_conserve_vlc"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $('.desableLabelVlc').css("text-decoration", "none");
+                    $("#ie_conserve_vlc").val("VLC Check Intéréser = OUI");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $('.desableLabelVlc').css("text-decoration", "line-through");
+                    $("#ie_conserve_vlc").val("VLC Check Intéréser = NON");
                 }
             });
         });
         // line Coutume -->
         $(document).ready(function () {
-            $('input[value="coutumeCheck"]').click(function () {
+            $('input[id="ie_conserve_coutume"]').click(function () {
                 if ($(this).prop("checked") == true) {
-                    //Active un élément
+                    //Active un élément 
                     $(".desableCoutume").prop("disabled", false);
                     $(".desableCoutume").val("");
+                    $('#ie_conserve_coutume').val("Coutume Check Intéréser = OUI");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableCoutume").val("0");
+                    $('#ie_conserve_coutume').val("Coutume Check Intéréser = NON");
                     $(".desableCoutume").prop("disabled", true);
                 }
             });
@@ -599,7 +709,10 @@
                 let suppliers = $("#ie_suppliers_constructor").val();
                 let post = $("#ie_post_constructor").val();
                 let estimate = $("#ie_estimate_constructor").val();
-                let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 1:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                let ligne =
+                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 1:</label></td><td class='table-center_td'> " +
+                    suppliers + "</td><td class='table-center_td'> " + post +
+                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
                 $("table.resultaPlusContructor").append(ligne);
             });
             $(".delete").click(function () {
@@ -612,13 +725,16 @@
         });
         // !--Ligne suplémentaire Constructor-- >
         $(document).ready(function () {
-        $(".addTechnical").click(function () {
-        let suppliers = $("#ie_suppliers_technical").val();
-        let post = $("#ie_post_technical").val();
-        let estimate = $("#ie_estimate_technical").val();
-        let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 2:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
-        $("table.resultaPlusTechnical").append(ligne);
-        });
+            $(".addTechnical").click(function () {
+                let suppliers = $("#ie_suppliers_technical").val();
+                let post = $("#ie_post_technical").val();
+                let estimate = $("#ie_estimate_technical").val();
+                let ligne =
+                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 2:</label></td><td class='table-center_td'> " +
+                    suppliers + "</td><td class='table-center_td'> " + post +
+                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                $("table.resultaPlusTechnical").append(ligne);
+            });
             $(".delete").click(function () {
                 $("table.resultaPlusTechnical").find('input[name="select"]').each(function () {
                     if ($(this).is(":checked")) {
@@ -627,16 +743,18 @@
                 });
             });
         });
-        
         // !--Ligne suplémentaire Works-- >
         $(document).ready(function () {
-        $(".addWork").click(function () {
-        let suppliers = $("#ie_suppliers_work").val();
-        let post = $("#ie_post_work").val();
-        let estimate = $("#ie_estimate_work").val();
-        let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 3:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
-        $("table.resultaPlusWork").append(ligne);
-        });
+            $(".addWork").click(function () {
+                let suppliers = $("#ie_suppliers_work").val();
+                let post = $("#ie_post_work").val();
+                let estimate = $("#ie_estimate_work").val();
+                let ligne =
+                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 3:</label></td><td class='table-center_td'> " +
+                    suppliers + "</td><td class='table-center_td'> " + post +
+                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                $("table.resultaPlusWork").append(ligne);
+            });
             $(".delete").click(function () {
                 $("table.resultaPlusWork").find('input[name="select"]').each(function () {
                     if ($(this).is(":checked")) {
@@ -647,13 +765,16 @@
         });
         // !--Ligne suplémentaire Transport-- >
         $(document).ready(function () {
-        $(".addTransport").click(function () {
-        let suppliers = $("#ie_suppliers_transport").val();
-        let post = $("#ie_post_transport").val();
-        let estimate = $("#ie_estimate_transport").val();
-        let ligne = "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 4:</label></td><td class='table-center_td'> " + suppliers + "</td><td class='table-center_td'> " + post + "</td><td class='table-center_td'>" + estimate + " </td></tr>";
-        $("table.resultaPlustransport").append(ligne);
-        });
+            $(".addTransport").click(function () {
+                let suppliers = $("#ie_suppliers_transport").val();
+                let post = $("#ie_post_transport").val();
+                let estimate = $("#ie_estimate_transport").val();
+                let ligne =
+                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 4:</label></td><td class='table-center_td'> " +
+                    suppliers + "</td><td class='table-center_td'> " + post +
+                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                $("table.resultaPlustransport").append(ligne);
+            });
             $(".delete").click(function () {
                 $("table.resultaPlustransport").find('input[name="select"]').each(function () {
                     if ($(this).is(":checked")) {
@@ -662,7 +783,94 @@
                 });
             });
         });
-    </script>
+        // !--Ligne suplémentaire Office-- >
+                $(document).ready(function () {
+            $(".addOffice").click(function () {
+                let suppliers = $("#ie_suppliers_office").val();
+                let post = $("#ie_post_office").val();
+                let estimate = $("#ie_estimate_office").val();
+                let ligne =
+                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 5:</label></td><td class='table-center_td'> " +
+                    suppliers + "</td><td class='table-center_td'> " + post +
+                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                $("table.resultaPlusOffice").append(ligne);
+            });
+            $(".delete").click(function () {
+                $("table.resultaPlusOffice").find('input[name="select"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("table.resultaPlusOffice tr").remove();
+                    }
+                });
+            });
+        });
+        // !--Ligne suplémentaire Furniture-- >
+        $(document).ready(function () {
+            $(".addFurniture").click(function () {
+                let suppliers = $("#ie_suppliers_furniture").val();
+                let post = $("#ie_post_furniture").val();
+                let estimate = $("#ie_estimate_furniture").val();
+                let ligne =
+                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 6:</label></td><td class='table-center_td'> " +
+                    suppliers + "</td><td class='table-center_td'> " + post +
+                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
+                $("table.resultaPlusFurniture").append(ligne);
+            });
+            $(".delete").click(function () {
+                $("table.resultaPlusFurniture").find('input[name="select"]').each(function () {
+                    if ($(this).is(":checked")) {
+                        $(this).parents("table.resultaPlusFurniture tr").remove();
+                    }
+                });
+            });
+        });
+
+        // $(document).ready(function() {
+        //     let totalConstructor = parseInt($('#ie_estimate_constructor').val());
+        //     let totalTechnical = parseInt($('#ie_estimate_technical').val());
+        //     let totalWork = parseInt($('#ie_estimate_work').val());
+        //     let totalTransport = parseInt($('#ie_estimate_transport').val());
+        //     let totalOffice = parseInt($('#ie_estimate_office').val());
+        //     let totalFurniture = parseInt($('#ie_estimate_furniture').val());
+
+        //     let totalTableOne = totalConstructor + totalTechnical + totalWork + totalTransport + totalOffice + totalFurniture;
+        //     $('#totalTableOne').text(totalTableOne);
+        // });
+
+        $(document).ready(function () {
+            // parcourir chaque zone de texte et ajouter keyup
+            // gestionnaire pour déclencher l'événement sum
+            $(".txt").each(function () {
+                $(this).keyup(function () {
+                    calculateSum();
+                });
+            });
+        });
+        function calculateSum() {
+            var sum = 0;            
+                // parcourir chaque zone de texte et ajouter les valeurs
+            $(".txt").each(function () {
+                // ajouter uniquement si la valeur est un nombre
+                if (!isNaN(this.value) && this.value.length != 0) {
+                    sum += parseFloat(this.value);
+                }
+            });            
+            var sumQ = [];
+            for (var i=1; i<=3; i++) {
+                sumQ[i] = 0;
+                $('td:nth-child('+(i+1+1+1)+')').find(".txt").each(function () {
+                    if (!isNaN(this.value) && this.value.length != 0) {
+                        sumQ[i] += parseFloat(this.value);
+                    }
+                });
+                $(".span7").find('input').eq(i-1).val(sumQ[i].toFixed(0));
+                $(".span8").find('input').eq(i-1).val(sumQ[i].toFixed(0));                
+                $(".span9").find('input').eq(i-1).val(sumQ[i].toFixed(0));
+            }
+           
+                // La méthode toFixed () arrondira la somme finale à 2 décimales
+            $("#sum").val(sum.toFixed(0));
+        }
+</script>
 </body>
 
 </html>
