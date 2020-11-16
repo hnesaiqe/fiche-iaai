@@ -122,6 +122,75 @@
                                             id="boutonajouterUneLigneContructor" disabled>
                                     </td>
                                 </tr>
+                                <tr style="display: none;" class="addContructor2" >
+                                    <td class='table-center_td'>
+                                        <label></label>
+                                    </td>
+                                    <td class='table-center_td'><input placeholder="Fournisseur" minlength="1" maxlength="20" type="text" >
+                                    </td>
+                                    <td class='table-center_td'><input placeholder="Construction, Bâtiment" minlength="1" maxlength="20" type="text" >   
+                                    </td>
+                                    <td class='table-center_td'><input placeholder="Estimation XPF" minlength="1" maxlength="20" type="text" >   
+                                    </td>
+                                    <td>
+                                        <input type="button"  value="Ajouter une ligne"
+                                            id="boutonajouterUneLigneContructor2">
+                                    <input type="button" value="Supprimer" id="boutonSuppLigneConstructor2">
+                                    <input type='checkbox' name='select'>
+                                    
+                                    </td>
+
+                                </tr>
+                                <tr style="display: none;" class="addContructor3">
+                                    <td class='table-center_td'>
+                                        <label></label>
+                                    </td>
+                                    <td class='table-center_td'>
+
+                                    </td>
+                                    <td class='table-center_td'>   
+                                    </td>
+                                    <td class='table-center_td'>   
+                                    </td>
+                                    <td><input type="button"  value="Ajouter une ligne"
+                                    id="boutonajouterUneLigneContructor3">
+                                    <input type="button" value="Supprimer" id="boutonSuppLigneConstructor3">
+                                    <input type='checkbox' name='select'></td>
+                                </tr>
+                                <tr style="display: none;" class="addContructor4">
+                                    <td class='table-center_td'>
+                                        <label></label>
+                                    </td>
+                                    <td class='table-center_td'>
+
+                                    </td>
+                                    <td class='table-center_td'>   
+                                    </td>
+                                    <td class='table-center_td'>   
+
+                                    </td>
+                                     <td><input type="button"  value="Ajouter une ligne"
+                                    id="boutonajouterUneLigneContructor4">
+                                    <input type="button" value="Supprimer" id="boutonSuppLigneConstructor4">
+                                    <input type='checkbox' name='select'></td>
+                                </tr>
+                                <tr style="display: none;" class="addContructor5">
+                                    <td class='table-center_td'>
+                                        <label></label>
+                                    </td>
+                                    <td class='table-center_td'>
+
+                                    </td>
+                                    <td class='table-center_td'>   
+                                    </td>
+                                    <td class='table-center_td'>   
+
+                                    </td>
+                                    <td>
+                                    <input type="button" value="Supprimer" id="boutonSuppLigneConstructor5">
+                                    <input type='checkbox' name='select'></td>
+                                </tr>
+
                             </table>
                             <table class="table-center resultaPlusTechnical table table-bordered">
                                 <tr>
@@ -303,7 +372,7 @@
                                     <th class="width-table-2"></th>
                                     <th class="width-table-">SOUS-TOTAL IMMOBILISATIONS CORPORELLES</th>
                                     <th class="table-center_th width-table-1" id="totalTableOne"> 
-                                        <div class="span7">
+                                        <div class="resultTableOne">
                                             <div class="form-inline">
                                                 <label>Quarters' Total</label>
                                                 <input type="text" class="input-mini" />
@@ -355,7 +424,7 @@
                                     <th class="width-table-2"></th>
                                     <th class="width-table-3">SOUS-TOTAL IMMOBILISATIONS INCORPORELLES</th>
                                     <th class="table-center_th width-table-1">
-                                        <div class="span8">
+                                        <div class="resultTableTwo">
                                             <div class="form-inline">
                                                 <label>Quarters' Total</label>
                                                 <input type="text" class="input-mini" style="display: none;"/>
@@ -401,7 +470,7 @@
                                     <th class="width-table-2"></th>
                                     <th class="width-table-3">SOUS-TOTAL AUTRES FRAIS IMMOBILISES</th>
                                     <th class="table-center_th width-table-1">
-                                        <div class="span9">
+                                        <div class="resultTablethree">
                                             <div class="form-inline">
                                                 <label>Quarters' Total</label>
                                                 <input type="text" class="input-mini"  style="display: none;"/>
@@ -459,7 +528,8 @@
                                  </div>
                             </div></td>
                             </tr>
-                        </table></div>
+                        </table>
+                    </div>
                         
                             
                             <h2 class="text-center">RAJOUT DE LIGNE</h2>
@@ -505,15 +575,46 @@
                     //Active un élément
                     $(".desableConstructor").prop("disabled", false);
                     $("#boutonajouterUneLigneContructor").prop("disabled", false);
-                    $(".desableConstructor").val("0");
+                    $("#ie_estimate_constructor").val("0");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément                                     
                     $(".desableConstructor").val("");
                     $(".desableConstructor").prop("disabled", true);
                     $("#boutonajouterUneLigneContructor").prop("disabled", true);
-                }
+                     }
             });
         });
+        // $(document).ready(function(){
+        //     if($(this).prop('checked') == true){
+        //         $(".desableConstructor").
+
+
+        //     }
+
+        // });
+       $(document).ready(function(){
+            $("#boutonSuppLigneConstructor2").click(function (){
+                $(".addContructor2").hide();
+            });            
+        });
+         $(document).ready(function(){
+            $("#boutonSuppLigneConstructor3").click(function (){
+                $(".addContructor3").hide();
+            });            
+        });
+         $(document).ready(function(){
+            $("#boutonSuppLigneConstructor4").click(function (){
+                $(".addContructor4").hide();
+            });            
+        });
+         $(document).ready(function(){
+            $("#boutonSuppLigneConstructor5").click(function (){
+                $(".addContructor5").hide();
+            });            
+        });
+
+
+
         //Ligne du théme technical
         $(document).ready(function () {
             $('input[value="TechnicalCheck"]').click(function () {
@@ -521,7 +622,7 @@
                     //Active un élément
                     $(".desableTechnical").prop("disabled", false);
                     $("#boutonajouterUneLigneTechnical").prop("disabled", false);
-                    $(".desableTechnical").val("Aucune valeur");
+                    $("#ie_estimate_technical").val("0");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableTechnical").val("");
@@ -537,7 +638,7 @@
                     //Active un élément
                     $(".desableWork").prop("disabled", false);
                     $("#boutonajouterUneLigneWork").prop("disabled", false);
-                    $(".desableWork").val("Aucune valeur");
+                    $("#ie_estimate_wor").val("0");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableWork").val("");
@@ -552,7 +653,7 @@
             $('input[value="transportCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément
-                    $(".desableTransport").val("Aucune valeur");
+                    $("#ie_estimate_transport").val("0");
                     $(".desableTransport").prop("disabled", false);
                     $("#boutonajouterUneLigneTransport").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
@@ -568,7 +669,7 @@
             $('input[value="officeCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément                    
-                    $(".desableOffice").val("Aucune valeur");
+                    $("#ie_estimate_office").val("0");
                     $(".desableOffice").prop("disabled", false);
                     $("#boutonajouterUneLigneOffice").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
@@ -584,7 +685,7 @@
             $('input[value="furnitureCheck"]').click(function () {
                 if ($(this).prop("checked") == true) {
                     //Active un élément
-                    $(".desableFurniture").val("Aucune valeur");
+                    $("#ie_estimate_furniture").val("0");
                     $(".desableFurniture").prop("disabled", false);
                     $("#boutonajouterUneLigneFurniture").prop("disabled", false);
                 } else if ($(this).prop("checked") == false) {
@@ -629,7 +730,7 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément 
                     $(".desableCoutume").prop("disabled", false);
-                    $(".desableCoutume").val("");
+                    $(".ie_estimate_coutume").val("");
                     $('#ie_conserve_coutume').val("Coutume Check Intéréser = OUI");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
@@ -681,7 +782,7 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableStock").prop("disabled", false);
-                    $(".desableStock").val("");
+                    $("#ie_estimate_stock").val("0");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableStock").val("0");
@@ -695,7 +796,7 @@
                 if ($(this).prop("checked") == true) {
                     //Active un élément
                     $(".desableTresor").prop("disabled", false);
-                    $(".desableTresor").val("");
+                    $("#ie_estimate_tresor").val("0");
                 } else if ($(this).prop("checked") == false) {
                     //Désactive un élément
                     $(".desableTresor").val("0");
@@ -706,23 +807,28 @@
         // !--Ligne suplémentaire Constructor-- >
         $(document).ready(function () {
             $(".addContructor").click(function () {
-                let suppliers = $("#ie_suppliers_constructor").val();
-                let post = $("#ie_post_constructor").val();
-                let estimate = $("#ie_estimate_constructor").val();
-                let ligne =
-                    "<tr><td class='table-center_td'><input type='checkbox' name='select'><label>Identifiant 1:</label></td><td class='table-center_td'> " +
-                    suppliers + "</td><td class='table-center_td'> " + post +
-                    "</td><td class='table-center_td'>" + estimate + " </td></tr>";
-                $("table.resultaPlusContructor").append(ligne);
-            });
-            $(".delete").click(function () {
-                $("table.resultaPlusContructor").find('input[name="select"]').each(function () {
-                    if ($(this).is(":checked")) {
-                        $(this).parents("table.resultaPlusContructor tr").remove();
-                    }
-                });
+                $(".addContructor2").show();
             });
         });
+        $(document).ready(function(){
+            $("#boutonajouterUneLigneContructor2").click(function (){
+                $(".addContructor3").show();
+
+            });
+        });
+          $(document).ready(function(){
+            $("#boutonajouterUneLigneContructor3").click(function (){
+                $(".addContructor4").show();
+
+            });
+        });
+          $(document).ready(function(){
+            $("#boutonajouterUneLigneContructor4").click(function (){
+                $(".addContructor5").show();
+
+            });
+        });
+        
         // !--Ligne suplémentaire Constructor-- >
         $(document).ready(function () {
             $(".addTechnical").click(function () {
@@ -862,9 +968,9 @@
                         sumQ[i] += parseFloat(this.value);
                     }
                 });
-                $(".span7").find('input').eq(i-1).val(sumQ[i].toFixed(0));
-                $(".span8").find('input').eq(i-1).val(sumQ[i].toFixed(0));                
-                $(".span9").find('input').eq(i-1).val(sumQ[i].toFixed(0));
+                $(".resultTableOne").find('input').eq(i-1).val(sumQ[i].toFixed(0));
+                $(".resultTableTwo").find('input').eq(i-1).val(sumQ[i].toFixed(0));                
+                $(".resultTablethree").find('input').eq(i-1).val(sumQ[i].toFixed(0));
             }
            
                 // La méthode toFixed () arrondira la somme finale à 2 décimales
