@@ -39,9 +39,9 @@ app.post("/register", function (req, res) {
 
   // ICI
   
-  // const addLineSupplConst2 = req.body.addLineSupplConst2;
-  // const addLinePostConst2 = req.body.addLinePostConst2;
-  // const addLineEstConst2 = req.body.addLineEstConst2;
+  const addLineSupplConst2 = req.body.addLineSupplConst2;
+  const addLinePostConst2 = req.body.addLinePostConst2;
+  const addLineEstConst2 = req.body.addLineEstConst2;
 
   //Recapitulatif technical requete//
   const ie_suppliers_technical = req.body.ie_suppliers_technical;
@@ -98,9 +98,9 @@ app.post("/register", function (req, res) {
 
     // ICI AUSSI
 
-    // addLineSupplConst2: addLineSupplConst2,
-    // addLinePostConst2: addLinePostConst2,
-    // addLineEstConst2: addLineEstConst2,
+    addLineSupplConst2: addLineSupplConst2,
+    addLinePostConst2: addLinePostConst2,
+    addLineEstConst2: addLineEstConst2,
     
 
         //Recapitulatif technical//
