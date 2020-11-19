@@ -133,7 +133,7 @@ app.post("/register", function (req, res) {
     ie_conserve_stock: ie_conserve_stock,
     ie_conserve_tresorerie: ie_conserve_tresorerie,
 
-    //Recapitulatif dernier table//
+    //Recapitulatif dernier table ...//
     ie_total_stock: ie_total_stock,
     ie_total_coutume: ie_total_coutume,
     ie_total_tresorerie: ie_total_tresorerie
