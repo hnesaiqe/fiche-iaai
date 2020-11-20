@@ -128,6 +128,20 @@ app.post("/register", function (req, res) {
   const ie_suppliers_furniture = req.body.ie_suppliers_furniture;
   const ie_post_furniture = req.body.ie_post_furniture;
   const ie_estimate_furniture = req.body.ie_estimate_furniture;
+// line supllémentaire Furniture 
+const addLineSupplFurniture2 = req.body.addLineSupplFurniture2;
+const addLinePostFurniture2 = req.body.addLinePostFurniture2;
+const addLineEstFurniture2 = req.body.addLineEstFurniture2;
+const addLineSupplFurniture3 = req.body.addLineSupplFurniture3;
+const addLinePostFurniture3 = req.body.addLinePostFurniture3;
+const addLineEstFurniture3 = req.body.addLineEstFurniture3;
+const addLineSupplFurniture4 = req.body.addLineSupplFurniture4;
+const addLinePostFurniture4 = req.body.addLinePostFurniture4;
+const addLineEstFurniture4 = req.body.addLineEstFurniture4;
+const addLineSupplFurniture5 = req.body.addLineSupplFurniture5;
+const addLinePostFurniture5 = req.body.addLinePostFurniture5;
+const addLineEstFurniture5 = req.body.addLineEstFurniture5;
+
   //Recapitulatif dernier table//
   const ie_total_coutume = req.body.ie_total_coutume;
   const ie_total_stock = req.body.ie_total_stock;
@@ -252,6 +266,20 @@ app.post("/register", function (req, res) {
     ie_suppliers_furniture: ie_suppliers_furniture,
     ie_post_furniture: ie_post_furniture,
     ie_estimate_furniture: ie_estimate_furniture,
+     // Line supplémentaire Furnitures
+     addLineSupplFurniture2: addLineSupplFurniture2,
+     addLinePostFurniture2: addLinePostFurniture2,
+     addLineEstFurniture2: addLineEstFurniture2,
+     addLineSupplFurniture3: addLineSupplFurniture3,
+     addLinePostFurniture3: addLinePostFurniture3,
+     addLineEstFurniture3: addLineEstFurniture3,
+     addLineSupplFurniture4: addLineSupplFurniture4,
+     addLinePostFurniture4: addLinePostFurniture4,
+     addLineEstFurniture4: addLineEstFurniture4,
+     addLineSupplFurniture5: addLineSupplFurniture5,
+     addLinePostFurniture5: addLinePostFurniture5,
+     addLineEstFurniture5: addLineEstFurniture5,
+
     //Recapitulatif des checkBox etat//
     ie_conserve_prog: ie_conserve_prog,
     ie_conserve_vlc: ie_conserve_vlc,
