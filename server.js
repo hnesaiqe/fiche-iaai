@@ -56,6 +56,20 @@ app.post("/register", function (req, res) {
   const ie_suppliers_technical = req.body.ie_suppliers_technical;
   const ie_post_technical = req.body.ie_post_technical;
   const ie_estimate_technical = req.body.ie_estimate_technical;
+    // line supllémentaire Constructor  
+    const addLineSupplTech2 = req.body.addLineSupplTech2;
+    const addLinePostTech2 = req.body.addLinePostTech2;
+    const addLineEstTech2 = req.body.addLineEstTech2;
+    const addLineSupplTech3 = req.body.addLineSupplTech3;
+    const addLinePostTech3 = req.body.addLinePostTech3;
+    const addLineEstTech3 = req.body.addLineEstTech3;
+    const addLineSupplTech4 = req.body.addLineSupplTech4;
+    const addLinePostTech4 = req.body.addLinePostTech4;
+    const addLineEstTech4 = req.body.addLineEstTech4;
+    const addLineSupplTech5 = req.body.addLineSupplTech5;
+    const addLinePostTech5 = req.body.addLinePostTech5;
+    const addLineEstTech5 = req.body.addLineEstTech5;
+
   //Recapitulatif work requete//
   const ie_suppliers_work = req.body.ie_suppliers_work;
   const ie_post_work = req.body.ie_post_work;
@@ -118,13 +132,26 @@ app.post("/register", function (req, res) {
     addLineSupplConst5: addLineSupplConst5,
     addLinePostConst5: addLinePostConst5,
     addLineEstConst5: addLineEstConst5,
-
-    
-
+   
         //Recapitulatif technical//
     ie_suppliers_technical: ie_suppliers_technical,
     ie_post_technical: ie_post_technical,
     ie_estimate_technical: ie_estimate_technical,
+
+        // Line supplémentaire Constructor
+        addLineSupplTech2: addLineSupplTech2,
+        addLinePostTech2: addLinePostTech2,
+        addLineEstTech2: addLineEstTech2,
+        addLineSupplTech3: addLineSupplTech3,
+        addLinePostTech3: addLinePostTech3,
+        addLineEstTech3: addLineEstTech3,
+        addLineSupplTech4: addLineSupplTech4,
+        addLinePostTech4: addLinePostTech4,
+        addLineEstTech4: addLineEstTech4,
+        addLineSupplTech5: addLineSupplTech5,
+        addLinePostTech5: addLinePostTech5,
+        addLineEstTech5: addLineEstTech5,
+
     //Recapitulatif works//
     ie_suppliers_work: ie_suppliers_work,
     ie_post_work: ie_post_work,
