@@ -110,6 +110,20 @@ app.post("/register", function (req, res) {
   const ie_suppliers_office = req.body.ie_suppliers_office;
   const ie_post_office = req.body.ie_post_office;
   const ie_estimate_office = req.body.ie_estimate_office;
+  // line supllémentaire Offices  
+  const addLineSupplOffice2 = req.body.addLineSupplOffice2;
+  const addLinePostOffice2 = req.body.addLinePostOffice2;
+  const addLineEstOffice2 = req.body.addLineEstOffice2;
+  const addLineSupplOffice3 = req.body.addLineSupplOffice3;
+  const addLinePostOffice3 = req.body.addLinePostOffice3;
+  const addLineEstOffice3 = req.body.addLineEstOffice3;
+  const addLineSupplOffice4 = req.body.addLineSupplOffice4;
+  const addLinePostOffice4 = req.body.addLinePostOffice4;
+  const addLineEstOffice4 = req.body.addLineEstOffice4;
+  const addLineSupplOffice5 = req.body.addLineSupplOffice5;
+  const addLinePostOffice5 = req.body.addLinePostOffice5;
+  const addLineEstOffice5 = req.body.addLineEstOffice5;
+
   //Recapitulatif furniture requete//
   const ie_suppliers_furniture = req.body.ie_suppliers_furniture;
   const ie_post_furniture = req.body.ie_post_furniture;
@@ -215,11 +229,25 @@ app.post("/register", function (req, res) {
     addLineSupplTransport5: addLineSupplTransport5,
     addLinePostTransport5: addLinePostTransport5,
     addLineEstTransport5: addLineEstTransport5,
-    
+
     //Recapitulatif office//
     ie_suppliers_office: ie_suppliers_office,
     ie_post_office: ie_post_office,
     ie_estimate_office: ie_estimate_office,
+     // Line supplémentaire Offices
+     addLineSupplOffice2: addLineSupplOffice2,
+     addLinePostOffice2: addLinePostOffice2,
+     addLineEstOffice2: addLineEstOffice2,
+     addLineSupplOffice3: addLineSupplOffice3,
+     addLinePostOffice3: addLinePostOffice3,
+     addLineEstOffice3: addLineEstOffice3,
+     addLineSupplOffice4: addLineSupplOffice4,
+     addLinePostOffice4: addLinePostOffice4,
+     addLineEstOffice4: addLineEstOffice4,
+     addLineSupplOffice5: addLineSupplOffice5,
+     addLinePostOffice5: addLinePostOffice5,
+     addLineEstOffice5: addLineEstOffice5,
+
     //Recapitulatif furniture//
     ie_suppliers_furniture: ie_suppliers_furniture,
     ie_post_furniture: ie_post_furniture,
