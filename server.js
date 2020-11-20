@@ -56,7 +56,7 @@ app.post("/register", function (req, res) {
   const ie_suppliers_technical = req.body.ie_suppliers_technical;
   const ie_post_technical = req.body.ie_post_technical;
   const ie_estimate_technical = req.body.ie_estimate_technical;
-    // line supllémentaire Constructor  
+    // line supllémentaire Technical  
     const addLineSupplTech2 = req.body.addLineSupplTech2;
     const addLinePostTech2 = req.body.addLinePostTech2;
     const addLineEstTech2 = req.body.addLineEstTech2;
@@ -74,6 +74,20 @@ app.post("/register", function (req, res) {
   const ie_suppliers_work = req.body.ie_suppliers_work;
   const ie_post_work = req.body.ie_post_work;
   const ie_estimate_work = req.body.ie_estimate_work;
+   // line supllémentaire Works  
+   const addLineSupplWork2 = req.body.addLineSupplWork2;
+   const addLinePostWork2 = req.body.addLinePostWork2;
+   const addLineEstWork2 = req.body.addLineEstWork2;
+   const addLineSupplWork3 = req.body.addLineSupplWork3;
+   const addLinePostWork3 = req.body.addLinePostWork3;
+   const addLineEstWork3 = req.body.addLineEstWork3;
+   const addLineSupplWork4 = req.body.addLineSupplWork4;
+   const addLinePostWork4 = req.body.addLinePostWork4;
+   const addLineEstWork4 = req.body.addLineEstWork4;
+   const addLineSupplWork5 = req.body.addLineSupplWork5;
+   const addLinePostWork5 = req.body.addLinePostWork5;
+   const addLineEstWork5 = req.body.addLineEstWork5;
+   
   //Recapitulatif transport requete//
   const ie_suppliers_transport = req.body.ie_suppliers_transport;
   const ie_post_transport = req.body.ie_post_transport;
@@ -156,6 +170,20 @@ app.post("/register", function (req, res) {
     ie_suppliers_work: ie_suppliers_work,
     ie_post_work: ie_post_work,
     ie_estimate_work: ie_estimate_work,
+    // Line supplémentaire Work
+    addLineSupplWork2: addLineSupplWork2,
+    addLinePostWork2: addLinePostWork2,
+    addLineEstWork2: addLineEstWork2,
+    addLineSupplWork3: addLineSupplWork3,
+    addLinePostWork3: addLinePostWork3,
+    addLineEstWork3: addLineEstWork3,
+    addLineSupplWork4: addLineSupplWork4,
+    addLinePostWork4: addLinePostWork4,
+    addLineEstWork4: addLineEstWork4,
+    addLineSupplWork5: addLineSupplWork5,
+    addLinePostWork5: addLinePostWork5,
+    addLineEstWork5: addLineEstWork5,
+
     //Recapitulatif transport//
     ie_suppliers_transport: ie_suppliers_transport,
     ie_post_transport: ie_post_transport,
