@@ -37,11 +37,20 @@ app.post("/register", function (req, res) {
   const ie_post_constructor = req.body.ie_post_constructor;
   const ie_estimate_constructor = req.body.ie_estimate_constructor;
 
-  // ICI
-  
-  // const addLineSupplConst2 = req.body.addLineSupplConst2;
-  // const addLinePostConst2 = req.body.addLinePostConst2;
-  // const addLineEstConst2 = req.body.addLineEstConst2;
+  // line supllémentaire Constructor  
+  const addLineSupplConst2 = req.body.addLineSupplConst2;
+  const addLinePostConst2 = req.body.addLinePostConst2;
+  const addLineEstConst2 = req.body.addLineEstConst2;
+  const addLineSupplConst3 = req.body.addLineSupplConst3;
+  const addLinePostConst3 = req.body.addLinePostConst3;
+  const addLineEstConst3 = req.body.addLineEstConst3;
+  const addLineSupplConst4 = req.body.addLineSupplConst4;
+  const addLinePostConst4 = req.body.addLinePostConst4;
+  const addLineEstConst4 = req.body.addLineEstConst4;
+  const addLineSupplConst5 = req.body.addLineSupplConst5;
+  const addLinePostConst5 = req.body.addLinePostConst5;
+  const addLineEstConst5 = req.body.addLineEstConst5;
+
 
   //Recapitulatif technical requete//
   const ie_suppliers_technical = req.body.ie_suppliers_technical;
@@ -96,11 +105,20 @@ app.post("/register", function (req, res) {
     ie_post_constructor: ie_post_constructor,
     ie_estimate_constructor: ie_estimate_constructor,
 
-    // ICI AUSSI
+    // Line supplémentaire Constructor
+    addLineSupplConst2: addLineSupplConst2,
+    addLinePostConst2: addLinePostConst2,
+    addLineEstConst2: addLineEstConst2,
+    addLineSupplConst3: addLineSupplConst3,
+    addLinePostConst3: addLinePostConst3,
+    addLineEstConst3: addLineEstConst3,
+    addLineSupplConst4: addLineSupplConst4,
+    addLinePostConst4: addLinePostConst4,
+    addLineEstConst4: addLineEstConst4,
+    addLineSupplConst5: addLineSupplConst5,
+    addLinePostConst5: addLinePostConst5,
+    addLineEstConst5: addLineEstConst5,
 
-    // addLineSupplConst2: addLineSupplConst2,
-    // addLinePostConst2: addLinePostConst2,
-    // addLineEstConst2: addLineEstConst2,
     
 
         //Recapitulatif technical//
