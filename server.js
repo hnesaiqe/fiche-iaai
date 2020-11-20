@@ -87,11 +87,25 @@ app.post("/register", function (req, res) {
    const addLineSupplWork5 = req.body.addLineSupplWork5;
    const addLinePostWork5 = req.body.addLinePostWork5;
    const addLineEstWork5 = req.body.addLineEstWork5;
-   
+
   //Recapitulatif transport requete//
   const ie_suppliers_transport = req.body.ie_suppliers_transport;
   const ie_post_transport = req.body.ie_post_transport;
   const ie_estimate_transport = req.body.ie_estimate_transport;
+    // line supllémentaire Transports  
+    const addLineSupplTransport2 = req.body.addLineSupplTransport2;
+    const addLinePostTransport2 = req.body.addLinePostTransport2;
+    const addLineEstTransport2 = req.body.addLineEstTransport2;
+    const addLineSupplTransport3 = req.body.addLineSupplTransport3;
+    const addLinePostTransport3 = req.body.addLinePostTransport3;
+    const addLineEstTransport3 = req.body.addLineEstTransport3;
+    const addLineSupplTransport4 = req.body.addLineSupplTransport4;
+    const addLinePostTransport4 = req.body.addLinePostTransport4;
+    const addLineEstTransport4 = req.body.addLineEstTransport4;
+    const addLineSupplTransport5 = req.body.addLineSupplTransport5;
+    const addLinePostTransport5 = req.body.addLinePostTransport5;
+    const addLineEstTransport5 = req.body.addLineEstTransport5;
+
   //Recapitulatif office requete//
   const ie_suppliers_office = req.body.ie_suppliers_office;
   const ie_post_office = req.body.ie_post_office;
@@ -188,6 +202,20 @@ app.post("/register", function (req, res) {
     ie_suppliers_transport: ie_suppliers_transport,
     ie_post_transport: ie_post_transport,
     ie_estimate_transport: ie_estimate_transport,
+    // Line supplémentaire Transports
+    addLineSupplTransport2: addLineSupplTransport2,
+    addLinePostTransport2: addLinePostTransport2,
+    addLineEstTransport2: addLineEstTransport2,
+    addLineSupplTransport3: addLineSupplTransport3,
+    addLinePostTransport3: addLinePostTransport3,
+    addLineEstTransport3: addLineEstTransport3,
+    addLineSupplTransport4: addLineSupplTransport4,
+    addLinePostTransport4: addLinePostTransport4,
+    addLineEstTransport4: addLineEstTransport4,
+    addLineSupplTransport5: addLineSupplTransport5,
+    addLinePostTransport5: addLinePostTransport5,
+    addLineEstTransport5: addLineEstTransport5,
+    
     //Recapitulatif office//
     ie_suppliers_office: ie_suppliers_office,
     ie_post_office: ie_post_office,
