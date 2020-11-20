@@ -138,7 +138,7 @@ app.post("/register", function (req, res) {
     ie_post_technical: ie_post_technical,
     ie_estimate_technical: ie_estimate_technical,
 
-        // Line supplémentaire Constructor
+        // Line supplémentaire Technical
         addLineSupplTech2: addLineSupplTech2,
         addLinePostTech2: addLinePostTech2,
         addLineEstTech2: addLineEstTech2,
